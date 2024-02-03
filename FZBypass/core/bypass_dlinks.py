@@ -229,7 +229,7 @@ async def sharer_scraper(url):
         res = cget('GET', url, headers=header)
     except Exception as e:
         raise DDLException(f'{e.__class__.__name__}')
-    key = findall('"key",\s+"(.*?)"', res.text)
+    key = findall('"key",\\s+"(.*?)"', res.text)
     if not key:
         raise DDLException("Download Link Key not found!")
     key = key[0]
