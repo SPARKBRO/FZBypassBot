@@ -9,5 +9,5 @@ python-dotenv
 pyrofork
 requests
 tgcrypto
-urllib3
+urllib3==2.2.0
 uvloop
