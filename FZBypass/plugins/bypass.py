@@ -14,7 +14,7 @@ from FZBypass.core.exceptions import DDLException
 
 @Bypass.on_message(command('start'))
 async def start_msg(client, message):
-    await message.reply(f'''<b><i>FZ Bypass Bot!</i></b>
+    await message.reply(f'''<b><i>SPARK Bypass Bot!</i></b>
     
     <i>A Powerful Elegant Multi Threaded Bot written in Python... which can Bypass Various Shortener Links, Scrape links, and More ... </i>
     
@@ -23,7 +23,7 @@ async def start_msg(client, message):
 <b>Powered by : @Moviemania_TG</b>''',
         quote=True,
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('😃 Dev', url='https://t.me/SPA4KBRO')]
+            [InlineKeyboardButton('👨‍💻 Dev', url='https://t.me/SPA4KBRO')]
             ])
     )
 
@@ -38,9 +38,9 @@ async def bypass_check(client, message):
         txt = message.text
         entities = message.entities
     else:
-        return await message.reply('<i>No Link Provided!</i>')
+        return await message.reply('<i>🚫 No Link Provided!</i>')
     
-    wait_msg = await message.reply("<i>Bypassing...</i>")
+    wait_msg = await message.reply("<i>⚡ Bypassing...</i>")
     start = time()
 
     link, tlinks, no = '', [], 0
@@ -76,12 +76,12 @@ async def bypass_check(client, message):
         if is_excep_link(link):
             parse_data.append(f"{bp_link}\n\n━━━━━━━✦✗✦━━━━━━━\n\n")
         else:
-            parse_data.append(f'┎ <b>Source Link:</b> {link}{bp_link}\n\n━━━━━━━✦✗✦━━━━━━━\n\n')
+            parse_data.append(f'┎ <b>Source Link:</b> {link}{bp_link}\n\n🔥 @Moviemania_TG\n\n')
             
     end = time()
 
     if len(parse_data) != 0:
-        parse_data[-1] = parse_data[-1] + f"┎ <b>Total Links : {no}</b>\n┠ <b>Results In <code>{convert_time(end - start)}</code></b> !\n┖ <b>By </b>{message.from_user.mention} ( #ID{message.from_user.id} )"
+        parse_data[-1] = parse_data[-1] + f"┎ <b>Total Links : {no}</b>\n┖ <b>By </b>{message.from_user.mention} ( #ID{message.from_user.id} )"
     tg_txt = "━━━━━━━✦✗✦━━━━━━━\n\n"
     for tg_data in parse_data:
         tg_txt += tg_data
