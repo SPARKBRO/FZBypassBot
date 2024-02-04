@@ -62,7 +62,7 @@ async def bypass_check(client, message):
     parse_data = []
     for result, link in zip(completed_tasks, tlinks):
         if isinstance(result, Exception):
-            bp_link = f"\n┖ <b>Bypass Error:</b> {result}"
+            bp_link = f"\n┖ <b>🚫 Bypass Error:</b> {result}"
         elif is_excep_link(link):
             bp_link = result
         elif isinstance(result, list):
@@ -74,9 +74,9 @@ async def bypass_check(client, message):
             bp_link = f"\n┖ <b>Bypass Link:</b> {result}"
     
         if is_excep_link(link):
-            parse_data.append(f"{bp_link}\n\n━━━━━━━✦✗✦━━━━━━━\n\n")
+            parse_data.append(f"{bp_link}\n\n")
         else:
-            parse_data.append(f'┎ <b>Source Link:</b> {link}{bp_link}\n\n🔥 @Moviemania_TG\n\n')
+            parse_data.append(f'┎ <b>Source Link:</b> {link}{bp_link}\n\n')
             
     end = time()
 
