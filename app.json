@@ -1,0 +1,34 @@
+{
+  "name": "bypass",
+  "description": "Your Telegram Bot App Description",
+  "env": {
+    "AUTH_CHATS": {
+      "description": "Authorized Chats Environment Variable",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Your Telegram API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token",
+      "required": true
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
