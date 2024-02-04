@@ -82,7 +82,7 @@ async def bypass_check(client, message):
 
     if len(parse_data) != 0:
         parse_data[-1] = parse_data[-1] + f"┎ <b>Total Links : {no}</b>\n┖ <b>By </b>{message.from_user.mention} 🤍"
-    tg_txt = "😎 @Moviemania_TG\n\n"
+    tg_txt = "🔥 Powered by: @Moviemania_TG\n\n"
     for tg_data in parse_data:
         tg_txt += tg_data
         if len(tg_txt) > 4000:
