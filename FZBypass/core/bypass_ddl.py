@@ -169,7 +169,7 @@ async def try2link(url: str) -> str:
 
 
 async def gyanilinks(url: str) -> str:
-    DOMAIN = "https://go.hipsonyc.com/"
+    DOMAIN = "https://golink.gyanitheme.com/"
     cget = create_scraper(allow_brotli=False).request
     code = url.rstrip("/").split("/")[-1]
     soup = BeautifulSoup(cget("GET", f"{DOMAIN}/{code}").content, "html.parser")
